@@ -1,0 +1,1587 @@
+/* =========================================================
+   1. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --navy: #08243a;
+    --ink: #202a31;
+    --muted: #717b82;
+    --paper: #fff;
+    --bg: #f7f8f8;
+    --line: #e5e8e9;
+    --blue: #5570d9;
+    --mint: #dff4e8;
+}
+
+
+/* =========================================================
+   2. GLOBAL STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, Arial, sans-serif;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   3. TOP BAR
+   ========================================================= */
+
+.topbar {
+    height: 42px;
+    background: var(--navy);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 28px;
+    font-size: 13px;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mail {
+    font-size: 17px;
+}
+
+.pulse {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.socials {
+    display: flex;
+    gap: 14px;
+}
+
+.socials a {
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   4. HEADER / NAVIGATION
+   ========================================================= */
+
+.header {
+    height: 78px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 34px;
+}
+
+.logo {
+    font: 32px "DM Serif Display", serif;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav {
+    display: flex;
+    gap: 29px;
+}
+
+.tab {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    color: #3c454b;
+    padding: 8px 0;
+}
+
+.nav .tab {
+    font-family: "DM Serif Display", serif;
+    font-size: 18px;
+}
+
+.nav .tab.active {
+    color: var(--navy);
+}
+
+.nav .tab.active::after {
+    content: "";
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    background: var(--blue);
+    margin: 6px auto 0;
+}
+
+.menu {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   5. MAIN LAYOUT
+   ========================================================= */
+
+.layout {
+    min-height: calc(100vh - 160px);
+
+    display: grid;
+    grid-template-columns: 350px 1fr;
+
+    max-width: 1370px;
+    margin: 0 auto;
+
+    background: var(--paper);
+
+    box-shadow: 0 0 45px rgba(23, 37, 48, 0.04);
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   6. PROFILE SIDEBAR
+   ========================================================= */
+
+.profile-panel {
+    padding: 52px 34px 35px;
+
+    text-align: center;
+
+    border-right: 1px solid var(--line);
+
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fbfcfb 100%
+    );
+}
+
+
+/* ---------- Profile Photo ---------- */
+
+.photo-wrap {
+    width: 210px;
+    height: 210px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+    padding: 6px;
+
+    background: #f1f3f1;
+
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* ---------- Photo Placeholder ---------- */
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: #e8ece8;
+    border: 1px dashed #b9c1bb;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #737d76;
+}
+
+.camera {
+    font-size: 34px;
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+
+.photo-placeholder span {
+    font-size: 11px;
+}
+
+
+/* ---------- Profile Information ---------- */
+
+.profile-panel h1 {
+    font: 30px "DM Serif Display", serif;
+    margin: 0;
+}
+
+.role {
+    font: 600 16px "DM Serif Display", serif;
+    margin-top: 13px;
+    color: var(--navy);
+}
+
+.role i {
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    background: #56ad7b;
+    border-radius: 50%;
+
+    margin-left: 6px;
+}
+
+.location {
+    font-size: 12px;
+    color: var(--muted);
+
+    margin: 5px 0 19px;
+}
+
+
+/* =========================================================
+   7. SOCIAL ICONS
+   ========================================================= */
+
+.mini-socials {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.mini-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 1.6rem;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* LinkedIn */
+
+.mini-socials a:nth-child(1) {
+    color: #0A66C2;
+}
+
+
+/* Google Scholar */
+
+.mini-socials a:nth-child(2) {
+    color: #4285F4;
+}
+
+
+/* GitHub */
+
+.mini-socials a:nth-child(3) {
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.github-icon {
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+}
+
+
+/* Fiverr */
+
+.mini-socials a:nth-child(4) {
+    color: #EA4335;
+}
+
+.fiverr-icon {
+    font-family: Arial, sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+
+/* Email */
+
+.mini-socials a:nth-child(5) {
+    color: #EA4335;
+}
+
+.mini-socials a:nth-child(5) i {
+    font-size: 1.45rem;
+}
+
+
+/* Social Hover */
+
+.mini-socials a:hover {
+    transform: scale(1.12);
+}
+
+
+/* =========================================================
+   8. SIDEBAR ACTIONS
+   ========================================================= */
+
+.side-actions {
+    display: flex;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 28px 0 22px;
+}
+
+.hire,
+.resume {
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hire {
+    background: var(--navy);
+    color: #fff;
+}
+
+.resume {
+    border: 1px solid var(--navy);
+}
+
+.side-line {
+    height: 1px;
+    background: var(--line);
+
+    margin: 25px 0;
+}
+
+.side-note {
+    min-height: 48px;
+
+    font: 15px/1.5 "DM Serif Display", serif;
+
+    color: #7b858a;
+
+    margin: 0 12px;
+}
+
+
+/* =========================================================
+   9. MAIN CONTENT
+   ========================================================= */
+
+.content {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #fff;
+}
+
+.content::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image: radial-gradient(
+        #eef0f1 1.5px,
+        transparent 1.5px
+    );
+
+    background-size: 38px 38px;
+
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   10. PANELS
+   ========================================================= */
+
+.panel {
+    display: none;
+
+    position: relative;
+    z-index: 1;
+
+    padding: 54px 60px 60px;
+
+    min-height: 100%;
+
+    animation: appear 0.25s ease;
+}
+
+.panel.active {
+    display: block;
+}
+
+
+/* Panel Animation */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   11. TYPOGRAPHY
+   ========================================================= */
+
+.small-label {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: var(--blue);
+}
+
+h2,
+h3 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 1.12;
+
+    margin: 9px 0 15px;
+}
+
+
+/* =========================================================
+   12. HOME / INTRO SECTION
+   ========================================================= */
+
+.intro {
+    display: grid;
+
+    grid-template-columns: 1fr 260px;
+
+    gap: 55px;
+
+    align-items: end;
+
+    min-height: 420px;
+}
+
+.intro h2 {
+    font-size: 65px;
+    max-width: 650px;
+}
+
+.intro h2 em {
+    font-style: normal;
+    color: var(--blue);
+}
+
+.intro-copy {
+    max-width: 600px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ---------- Action Buttons ---------- */
+
+.actions {
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 28px;
+}
+
+.dark-btn,
+.light-btn {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 12px 17px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    border: 1px solid var(--navy);
+
+    cursor: pointer;
+}
+
+.dark-btn {
+    background: var(--navy);
+    color: white;
+}
+
+.light-btn {
+    background: white;
+}
+
+
+/* =========================================================
+   13. HELLO / TERMINAL CARD
+   ========================================================= */
+
+.hello-card {
+    background: var(--navy);
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    align-self: end;
+
+    box-shadow: 0 15px 35px rgba(8, 36, 58, 0.13);
+}
+
+.hello-card span {
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    color: #a9b8c2;
+}
+
+.hello-card strong {
+    display: block;
+
+    font: 22px "DM Serif Display", serif;
+
+    margin: 9px 0;
+}
+
+.hello-card p {
+    font-size: 11px;
+
+    color: #bdc9d0;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   14. STATISTICS
+   ========================================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--line);
+
+    margin-top: 50px;
+}
+
+.stats div {
+    padding: 18px 15px;
+
+    border-right: 1px solid var(--line);
+}
+
+.stats div:last-child {
+    border: 0;
+}
+
+.stats strong,
+.stats span {
+    display: block;
+}
+
+.stats strong {
+    font: 24px "DM Serif Display", serif;
+}
+
+.stats span {
+    font-size: 10px;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   15. SECTION HEADINGS
+   ========================================================= */
+
+.heading {
+    max-width: 720px;
+
+    margin-bottom: 36px;
+}
+
+.heading h2 {
+    font-size: 50px;
+}
+
+.heading p {
+    color: var(--muted);
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   16. ABOUT SECTION
+   ========================================================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+.about-grid article {
+    border: 1px solid var(--line);
+
+    padding: 27px;
+
+    border-radius: 8px;
+
+    background: #fff;
+}
+
+.about-grid .wide {
+    grid-column: span 2;
+}
+
+.about-grid span {
+    font-size: 10px;
+
+    color: var(--blue);
+
+    font-weight: 800;
+}
+
+.about-grid h3 {
+    font-size: 25px;
+
+    margin: 20px 0 8px;
+}
+
+.about-grid p {
+    font-size: 13px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   17. SKILLS SECTION
+   ========================================================= */
+
+.skill-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0 40px;
+}
+
+.skill-grid > div {
+    border-top: 1px solid var(--line);
+
+    padding: 21px 0;
+}
+
+.skill-grid h3 {
+    font-size: 21px;
+
+    margin: 0 0 8px;
+}
+
+.skill-grid p {
+    font-size: 12px;
+
+    color: var(--muted);
+
+    margin: 0;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   18. EXPERIENCE / JOBS
+   ========================================================= */
+
+.jobs article {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 30px;
+
+    border-top: 1px solid var(--line);
+
+    padding: 23px 0;
+}
+
+.jobs time {
+    font-size: 11px;
+
+    color: var(--muted);
+
+    font-weight: 700;
+}
+
+.jobs h3 {
+    font-size: 23px;
+
+    margin: 0 0 4px;
+}
+
+.jobs b {
+    font-size: 11px;
+}
+
+.jobs p {
+    font-size: 12px;
+
+    color: var(--muted);
+
+    margin: 7px 0 0;
+}
+
+
+/* =========================================================
+   19. PROJECTS
+   ========================================================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.project {
+    padding: 23px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 8px;
+
+    background: #fff;
+}
+
+.project.featured {
+    grid-column: span 2;
+
+    background: #f1f5ff;
+}
+
+.project span {
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: var(--blue);
+
+    font-weight: 700;
+}
+
+.project h3 {
+    font-size: 23px;
+
+    margin: 13px 0 7px;
+}
+
+.project p {
+    font-size: 12px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* ---------- Interactive Projects ---------- */
+
+.interactive-project {
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    cursor: default;
+}
+
+.interactive-project::before {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    background: rgba(85, 112, 217, 0.09);
+
+    right: -50px;
+    top: -50px;
+
+    transition: transform 0.35s ease;
+}
+
+.interactive-project:hover {
+    transform: translateY(-5px);
+
+    border-color: #c8d0ec;
+
+    box-shadow: 0 16px 35px rgba(25, 42, 52, 0.08);
+}
+
+.interactive-project:hover::before {
+    transform: scale(2.2);
+}
+
+.project-more {
+    position: relative;
+
+    margin-top: 18px;
+
+    font-size: 10px;
+
+    color: var(--blue);
+
+    opacity: 0.55;
+
+    transform: translateY(5px);
+
+    transition: 0.25s;
+}
+
+.interactive-project:hover .project-more {
+    opacity: 1;
+
+    transform: none;
+}
+
+.project-more b {
+    font-size: 13px;
+
+    margin-left: 4px;
+}
+
+
+/* =========================================================
+   20. PUBLICATION
+   ========================================================= */
+
+.publication {
+    margin-top: 13px;
+
+    padding: 20px 23px;
+
+    border-radius: 8px;
+
+    background: var(--navy);
+
+    color: #fff;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.publication span {
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #aebdc7;
+}
+
+.publication h3 {
+    font-size: 19px;
+
+    margin: 7px 0 0;
+}
+
+.publication a {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   21. EDUCATION
+   ========================================================= */
+
+.education {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 13px;
+}
+
+.education article {
+    padding: 25px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 8px;
+}
+
+.education time {
+    font-size: 10px;
+
+    color: var(--blue);
+
+    font-weight: 700;
+}
+
+.education h3 {
+    font-size: 22px;
+}
+
+.education p {
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+
+/* ---------- Certifications ---------- */
+
+.certs {
+    margin-top: 15px;
+
+    border: 1px solid var(--line);
+
+    padding: 17px;
+
+    border-radius: 8px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.certs b {
+    color: var(--ink);
+}
+
+
+/* =========================================================
+   22. CONTACT SECTION
+   ========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 370px;
+
+    gap: 70px;
+
+    align-items: center;
+
+    min-height: 520px;
+}
+
+.contact-grid h2 {
+    font-size: 62px;
+}
+
+.contact-grid > div:first-child p {
+    color: var(--muted);
+
+    max-width: 600px;
+
+    line-height: 1.8;
+}
+
+
+/* ---------- Contact Card ---------- */
+
+.contact-card {
+    border: 1px solid var(--line);
+
+    border-radius: 9px;
+
+    padding: 30px;
+
+    background: #fff;
+
+    box-shadow: 0 15px 40px rgba(25, 42, 52, 0.06);
+}
+
+.availability {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
+
+    color: #367253;
+
+    background: var(--mint);
+
+    padding: 7px 10px;
+
+    border-radius: 30px;
+}
+
+.availability i {
+    width: 6px;
+    height: 6px;
+
+    background: #4da974;
+
+    border-radius: 50%;
+}
+
+.contact-card > a:not(.dark-btn) {
+    display: block;
+
+    font: 21px "DM Serif Display", serif;
+
+    text-decoration: underline;
+
+    text-underline-offset: 4px;
+
+    margin: 30px 0 5px;
+}
+
+.contact-card > span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-bottom: 25px;
+}
+
+.contact-card .dark-btn {
+    display: inline-flex;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   23. FOOTER
+   ========================================================= */
+
+footer {
+    height: 42px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background: var(--navy);
+
+    color: #aebbc4;
+
+    font-size: 10px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   24. TYPING EFFECT
+   ========================================================= */
+
+.typing-line {
+    height: 31px;
+
+    margin: 12px 0 -2px;
+
+    font: 600 18px "DM Serif Display", serif;
+
+    color: var(--navy);
+
+    display: flex;
+    align-items: center;
+}
+
+.caret {
+    font-family: Inter, sans-serif;
+
+    font-size: 18px;
+
+    color: var(--blue);
+
+    animation: blink 0.8s steps(1) infinite;
+
+    margin-left: 2px;
+}
+
+.mini-caret {
+    font-size: 9px;
+
+    color: var(--blue);
+
+    animation: blink 1s infinite;
+}
+
+
+/* =========================================================
+   25. TERMINAL CARD
+   ========================================================= */
+
+.terminal-card {
+    padding: 0;
+
+    overflow: hidden;
+
+    align-self: end;
+
+    background: #0a2235;
+}
+
+.terminal-top {
+    height: 33px;
+
+    background: #102e44;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0 12px;
+}
+
+.terminal-top i {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #71828e;
+
+    display: block;
+}
+
+.terminal-top span {
+    font: 10px Inter;
+
+    color: #8fa2ae;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transform: translateX(-9px);
+}
+
+.terminal-body {
+    padding: 17px 20px 20px;
+
+    font: 11px/1.45
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        monospace;
+
+    color: #dce6eb;
+}
+
+.terminal-body p {
+    margin: 5px 0;
+}
+
+.terminal-body b {
+    color: #9db0bd;
+
+    font-weight: 500;
+}
+
+.green {
+    color: #79d49d;
+}
+
+.terminal-result {
+    color: #fff;
+
+    padding-left: 13px;
+}
+
+.blink {
+    animation: blink 0.9s infinite;
+
+    color: #79d49d;
+}
+
+
+/* =========================================================
+   26. ANIMATIONS
+   ========================================================= */
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   27. MOUSE INTERACTIVE EFFECT
+   ========================================================= */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 360px;
+    height: 360px;
+
+    left: var(--mx, -200px);
+    top: var(--my, -200px);
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(85, 112, 217, 0.07),
+        transparent 68%
+    );
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    transition:
+        left 0.18s ease-out,
+        top 0.18s ease-out;
+}
+
+
+/* =========================================================
+   28. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .layout {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .profile-panel {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .panel {
+        padding: 40px;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h2 {
+        font-size: 52px;
+    }
+
+    .hello-card {
+        max-width: 320px;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+}
+
+
+/* =========================================================
+   29. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+    /* ---------- Top Bar ---------- */
+
+    .topbar {
+        padding: 0 16px;
+    }
+
+    .socials {
+        gap: 9px;
+    }
+
+
+    /* ---------- Header ---------- */
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .nav.open {
+        position: absolute;
+
+        top: 120px;
+        left: 0;
+        right: 0;
+
+        z-index: 20;
+
+        background: #fff;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 15px 25px;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+
+    /* ---------- Main Layout ---------- */
+
+    .layout {
+        display: block;
+    }
+
+
+    /* ---------- Profile ---------- */
+
+    .profile-panel {
+        border-right: 0;
+
+        border-bottom: 1px solid var(--line);
+
+        padding: 35px 25px;
+    }
+
+    .photo-wrap {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-panel h1 {
+        font-size: 27px;
+    }
+
+
+    /* ---------- Content ---------- */
+
+    .content {
+        min-height: 600px;
+    }
+
+    .panel {
+        padding: 38px 24px 50px;
+    }
+
+    .intro {
+        min-height: 0;
+    }
+
+    .intro h2 {
+        font-size: 44px;
+    }
+
+
+    /* ---------- Statistics ---------- */
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .stats div:nth-child(3),
+    .stats div:nth-child(4) {
+        border-top: 1px solid var(--line);
+    }
+
+
+    /* ---------- Headings ---------- */
+
+    .heading h2 {
+        font-size: 40px;
+    }
+
+
+    /* ---------- Grids ---------- */
+
+    .about-grid,
+    .skill-grid,
+    .project-grid,
+    .education,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid .wide,
+    .project.featured {
+        grid-column: auto;
+    }
+
+
+    /* ---------- Jobs ---------- */
+
+    .jobs article {
+        grid-template-columns: 1fr;
+
+        gap: 4px;
+    }
+
+
+    /* ---------- Publication ---------- */
+
+    .publication {
+        display: block;
+    }
+
+    .publication a {
+        display: inline-block;
+
+        margin-top: 12px;
+    }
+
+
+    /* ---------- Contact ---------- */
+
+    .contact-grid h2 {
+        font-size: 47px;
+    }
+
+
+    /* ---------- Footer ---------- */
+
+    footer {
+        height: auto;
+
+        padding: 14px 20px;
+
+        gap: 8px;
+
+        flex-direction: column;
+    }
+}
