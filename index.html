@@ -86,7 +86,7 @@
             <div class="typing-line"><span id="typedRole"></span><span class="caret">|</span></div>
             <h2>A little about what  <em>I do.</em></h2>
             <p class="intro-copy" style="text-align: justify;">I started my career in software engineering, spending 5+ years building full-stack applications, backend systems, APIs, integrations, and automation. My growing interest in AI led me to pursue a Master’s in Artificial Intelligence at the University of Pisa. 
-              <br/><br/>Currently, I am working as a Research Assistant on a government-funded product-focused project, combining research with hands-on work in Graph RAG, medical AI, Generative AI, NLP, and machine learning. I enjoy turning research ideas into practical, real-world solutions.
+              <br/>Currently, I am working as a Research Assistant on a government-funded product-focused project, combining research with hands-on work in Graph RAG, medical AI, Generative AI, NLP, and machine learning. I enjoy turning research ideas into practical, real-world solutions.
             </p>
             <div class="actions">
               <button class="dark-btn tab" data-tab="projects">View my work <span>→</span></button>
@@ -131,7 +131,7 @@
       <div class="panel" id="experience">
         <div class="heading"><span class="small-label">Experience</span><h2>Where I’ve worked</h2></div>
         <div class="jobs">
-          <article><time>2026 — now</time><div><h3>Research Assistant</h3><b>University of Pisa · Pisa, Italy</b><p>Graph RAG for cardiology, Smart KPI RAG, MedPharm AI, computer vision, NLP, forecasting and probabilistic modelling.</p></div></article>
+          <article><time>2026 — now</time><div><h3>Research Assistant</h3><b>University of Pisa · Pisa, Italy</b><p>Graph RAG for cardiology, Smart KPI RAG, MedPharm AI, CycleGAN, Emotion classification,  RNN model for benzene time-series forecasting.</p></div></article>
           <article><time>Jul 2021 — Sep 2024</time><div><h3>Software Engineer — Full Stack & System Integration</h3><b>Xceleran · Remote, USA</b><p>Franchisor systems,ReviewManagement, Scheduler, Charter Fishing, POS and Payment systems, Geotab tracking,Pitch Deck analysis, SSO and backend scalability.</p></div></article>
           <article><time>Nov 2020 — Aug 2021</time><div><h3>Jr. Programmer — Full Stack Developer</h3><b>Neosysworld · Chattogram, Bangladesh</b><p>Travel, ticketing, courier logistics, inventory and budgeting systems and a rule-based chatbot.</p></div></article>
           <article><time>Oct 2019 — Oct 2020</time><div><h3>Jr. Programmer — IT Department</h3><b>Chattogram Maa-O-Shishu-O General Hospital · Chattogram, Bangladesh</b><p>Pharmacy and HR ERP modules, COVID-19 test booth automation and clinical-system support.</p></div></article>
@@ -201,7 +201,7 @@
                 <div class="ai-project-image-overlay">
                   <span class="project-tag">
                      
-                    RAG · Enterprise AI
+                    LangChain · Ollama · RAG · PostgreSQL
                   </span>
 
                  
@@ -222,16 +222,7 @@
                   </p>
                 </div>
 
-                <div class="ai-project-bottom">
-
-                  <div class="project-tech">
-                    <span>LangChain</span>
-                    <span>Ollama</span>
-                    <span>RAG</span>
-                    <span>PostgreSQL</span>
-                  </div> 
-
-                </div>
+                 
 
               </div>
 
@@ -243,7 +234,7 @@
 
                 <div class="ai-project-image-overlay">
                   <span class="project-tag"> 
-                    AI · RAG · Healthcare
+                     LangChain · Ollama · RAG · PostgreSQL
                   </span>
 
                   
@@ -264,32 +255,77 @@
                     pharmacy operations and decision-making.
                   </p>
                 </div>
+            </article>
+            <article class="project interactive-project ai-project-card" data-category="ai" data-title="CycleGAN Image Denoising">
 
-                <div class="ai-project-bottom">
+                <div class="ai-project-image">
+                  <img
+                    src="image/Projects/CycleGen.png"
+                    alt="CycleGAN Image Denoising"
+                    loading="lazy" />
 
-                  <div class="project-tech">
-                    <span>AI Models</span>
-                    <span>RAG</span>
-                    <span>Inventory AI</span>
+                  <div class="ai-project-image-overlay">
+                    <span class="project-tag">
+                      CycleGAN · PyTorch · Computer Vision
+                    </span>
                   </div>
-
-                  
-
                 </div>
 
-              </div>
+                <div class="ai-project-info">
 
-            </article>
-            <article class="project interactive-project" data-category="ai" data-title="CycleGAN Denoising">
-              <span>Computer Vision</span>
-              <h3>CycleGAN Denoising</h3>
-              <p>Unsupervised image denoising in PyTorch under unpaired data settings.</p>
-            </article>
-            <article class="project interactive-project" data-category="ai" data-title="Emotion Classification">
-              <span>NLP</span>
-              <h3>Emotion Classification</h3>
-              <p>Multi-class text classification using LSTM and BERT.</p>
-            </article>
+                  <div>
+                    <span class="project-label">Vision Project</span>
+
+                    <h3>CycleGAN Image Denoising</h3>
+
+                    <p>
+                      Developed a CycleGAN-based image denoising model to restore robotic
+                      vision images corrupted with 90% salt-and-pepper noise. Trained on
+                      8,178 images from a 9,399-image PCC Soft Pneumatic Arm dataset
+                      (128×128 resolution), using adversarial and cycle consistency losses
+                      to generate high-quality reconstructions for robotics and computer
+                      vision applications.
+                    </p>
+                  </div>
+
+                   
+
+              </article>
+            <article class="project interactive-project ai-project-card" data-category="ai" data-title="Emotion Classification">
+                  <div class="ai-project-image">
+                    <img
+                      src="image/Projects/datamining.png"
+                      alt="Emotion Classification"
+                      loading="lazy" />
+
+                    <div class="ai-project-image-overlay">
+                      <span class="project-tag">
+                        NLP · LSTM · PyTorch .BERT
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="ai-project-info">
+
+                    <div>
+                      <span class="project-label">AI Based Project</span>
+
+                      <h3>Emotion Classification</h3>
+
+                      <p>
+                        Developed a multi-class emotion classification system using LSTM and
+                        BERT to identify emotions from textual data. Compared recurrent neural
+                        networks with transformer-based language models, leveraging contextual
+                        embeddings to improve classification performance across multiple
+                        emotion categories.
+                      </p>
+                    </div>
+
+                     
+
+                  </div>
+
+                </article>
           </div>
 
         <div class="showcase-grid" id="showcaseGrid">
